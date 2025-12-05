@@ -33,28 +33,12 @@ docker run -d \
   postgres:15
 ## Build Python App Image
 docker build -t app.py .
+
+![Build](https://github.com/raghavi421/docker_python/blob/75c31de7c0cb6389149598d96f656109af4f7f9e/screenshots/Build.png)
 ## Run the docker container
 docker run --rm --name app.py --network mynetwork   -e DB_HOST=pg -e DB_PORT=5432 -e DB_NAME=appdb -e DB_USER=appuser -e DB_PASS=apppass   app.py
 ## Output
-connecting to postgresql
-connecting to database
-data base rows
-Inserted row: (9, 'raghavi')
-All rows in table format:
-+----+--------+
-| id | name   |
-+----+--------+
-| 1  | Alice  |
-| 2  | Alice  |
-| 3  | Alice  |
-| 4  | Alice  |
-| 5  | Alice  |
-| 6  | Alice  |
-| 7  | Alice  |
-| 8  | raghavi |
-| 9  | raghavi |
-+----+--------+
-data base connection closed
+
 ## Push Image to Docker Hub
 docker tag app.py praghavi123/app.py:latest
 docker push praghavi123/app.py:latest
