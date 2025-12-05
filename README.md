@@ -39,6 +39,7 @@ docker build -t app.py .
 docker run --rm --name app.py --network mynetwork   -e DB_HOST=pg -e DB_PORT=5432 -e DB_NAME=appdb -e DB_USER=appuser -e DB_PASS=apppass   app.py
 ## Output
 
+![Run](https://github.com/raghavi421/docker_python/blob/da5e1740c481787a6159080ec819235359f7f9c7/screenshots/Run.png)
 ## Push Image to Docker Hub
 docker tag app.py praghavi123/app.py:latest
 docker push praghavi123/app.py:latest
